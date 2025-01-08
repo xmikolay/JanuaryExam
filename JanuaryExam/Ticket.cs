@@ -8,5 +8,16 @@ namespace JanuaryExam
 {
     internal class Ticket
     {
+        //Shorthand Properties for ticket class
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int AvailableTickets { get; set; }
+
+        public Ticket(string name, decimal price, int availableTickets)
+        {
+            Name = name;
+            Price = price;
+            AvailableTickets = availableTickets;
+        }   
     }
 }
