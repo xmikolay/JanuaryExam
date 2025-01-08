@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,22 @@ namespace JanuaryExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Event> events = new List<Event>();
+
+        List<Ticket> ticket = new List<Ticket>();
+
+        List<VIPTicket> vipTicket = new List<VIPTicket>();
 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //2 Event objects
+            Event event1 = new Event("Oasis Croke Park",new DateTime(2025, 06, 20), TypeOfEvent.Music );
+            Event event2 = new Event("Electric Picnic", new DateTime(2025, 08, 20), TypeOfEvent.Music);
         }
     }
 }

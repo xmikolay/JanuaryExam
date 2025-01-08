@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace JanuaryExam
 {
+    //Create enum here
+    public enum TypeOfEvent { Music, Comedy, Theatre }
+
     internal class Event : IComparable
     {
         public string Name { get; set; }
@@ -15,13 +18,13 @@ namespace JanuaryExam
 
         public List<Ticket> Tickets { get; set; }
 
-        public enum EventType { Music, Comedy, Theatre}
+        public TypeOfEvent EventType { get; set; }
 
-        public Event(string name, DateTime eventDate, List<Ticket> tickets)
+        public Event(string name, DateTime eventDate, TypeOfEvent eventType)
         {
             Name = name;
             EventDate = eventDate;
-            Tickets = tickets;
+            EventType = eventType;
         }
 
         //IComparable interface
