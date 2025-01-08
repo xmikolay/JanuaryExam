@@ -34,5 +34,10 @@ namespace JanuaryExam
 
             return this.EventDate.CompareTo(that.EventDate); //Comparing one event date to another
         }
+
+        public override string ToString()
+        {
+            return $"{Name} - {EventDate}";
+        }
     }
 }

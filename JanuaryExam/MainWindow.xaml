@@ -8,12 +8,12 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Events" HorizontalAlignment="Left" Margin="55,63,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxEvents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="55,104,464,69"/>
-        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="196,67,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="140" TextChanged="TextBox_TextChanged"/>
+        <ListBox x:Name="lbxEvents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="55,104,464,69" SelectionChanged="lbxEvents_SelectionChanged"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="196,67,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="140"/>
         <ListBox x:Name="lbxTickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="361,104,55,69"/>
         <Label Content="Tickets" HorizontalAlignment="Left" Margin="530,63,0,0" VerticalAlignment="Top"/>
         <Label Content="Number of Tickets" HorizontalAlignment="Left" Margin="434,370,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxNumOfTickets" HorizontalAlignment="Left" Margin="562,374,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxNumOfTickets" HorizontalAlignment="Left" Margin="562,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnBook" Content="Book" HorizontalAlignment="Left" Margin="714,373,0,0" VerticalAlignment="Top"/>
 
     </Grid>
