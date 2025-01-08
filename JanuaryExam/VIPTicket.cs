@@ -11,7 +11,7 @@ namespace JanuaryExam
         public string AdditionalExtras { get; set; }
         public decimal AdditionalCost { get; set; }
    
-        public VIPTicket(string name, decimal price, int availableTickets) 
+        public VIPTicket(string name, decimal price, decimal additionalCost, string additionalExtras, int availableTickets) 
             : base(name, price, availableTickets) //base calls the Ticket class for name price and available tickets
         { 
 

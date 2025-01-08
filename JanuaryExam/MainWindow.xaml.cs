@@ -37,6 +37,16 @@ namespace JanuaryExam
             //2 Event objects
             Event event1 = new Event("Oasis Croke Park",new DateTime(2025, 06, 20), TypeOfEvent.Music );
             Event event2 = new Event("Electric Picnic", new DateTime(2025, 08, 20), TypeOfEvent.Music);
+
+            //2 Ticket objects
+            Ticket ticket1 = new Ticket("Early bird", 100m, 100);
+            Ticket ticket2 = new Ticket("Platinum", 150m, 100);
+
+            //2 VIP Ticket objects
+            VIPTicket vipTicket1 = new VIPTicket("Ticket and Hotel Package", 150m, 100m, "4* Hotel", 100);
+            VIPTicket vipTicket2 = new VIPTicket("Weekend Ticket", 200m, 100m, "With Camping", 100);
+
+            
         }
     }
 }
