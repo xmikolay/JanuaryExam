@@ -10,7 +10,7 @@ namespace JanuaryExam
     //Create enum here
     public enum TypeOfEvent { Music, Comedy, Theatre }
 
-    internal class Event : IComparable
+    public class Event : IComparable
     {
         public string Name { get; set; }
 
@@ -39,5 +39,19 @@ namespace JanuaryExam
         {
             return $"{Name} - {EventDate}";
         }
+
+        //Trying to make a method to set random tickets for both events, couldnt figure it out
+
+        //public void AssignTicket()
+        //{
+        //    Random r = new Random();
+
+            
+
+        //    for (int i = 0; i < Tickets.Count; i++)
+        //    {
+        //        Ticket t = Tickets[i];
+        //    }
+        //}
     }
 }

@@ -21,11 +21,14 @@ namespace JanuaryExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Lists to hold event objects and ticket objects (vip included)
         List<Event> events = new List<Event>();
 
         List<Ticket> ticket = new List<Ticket>();
 
         //List<VIPTicket> vipTicket = new List<VIPTicket>();
+
+        List<Event> searchEvent;
 
         public MainWindow()
         {
@@ -39,6 +42,9 @@ namespace JanuaryExam
             Event event2 = new Event("Electric Picnic", new DateTime(2025, 08, 20), TypeOfEvent.Music);
             events.Add(event1);
             events.Add(event2);
+            //events.Add(event2); //Testing to see if events get sorted
+            //events.Add(event1);
+            events.Sort();
 
             //2 Ticket objects
             Ticket ticket1 = new Ticket("Early bird", 100m, 100);
@@ -52,7 +58,7 @@ namespace JanuaryExam
             ticket.Add(vipTicket1);
             ticket.Add(vipTicket2);
             
-            lbxEvents.ItemsSource = events;
+            lbxEvents.ItemsSource = events; //Displaying events in the list box
         }
 
         private void lbxEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -61,8 +67,43 @@ namespace JanuaryExam
 
             if (selected != null)
             {
-                lbxTickets.ItemsSource = ticket;
+                lbxTickets.ItemsSource = ticket; //Temporary setting of ticket list box to all of the tickets available
             }
         }
+
+        //Attempted Q1(k)
+        
+        //private void tbxSearch_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //    string searchTerm = tbxSearch.Text;
+
+        //    if (string.IsNullOrEmpty(searchTerm))
+        //        UpdateDisplay(events);
+        //    else
+        //    { 
+        //        searchEvent = FilterEvents(searchTerm);
+
+        //    }
+        //}
+
+        //private void UpdateDisplay(List<Event> events)
+        //{
+        //    lbxEvents.ItemsSource = null;
+        //    lbxTickets.ItemsSource = null;
+
+        //    lbxEvents.ItemsSource = FilterEvents(events);
+        //}
+
+        //private List<Event> FilterEvents(List<Event> events, string searchTerm)
+        //{
+        //    List<Event> filteredEvent = new List<Event>();
+
+        //    foreach (Event item in events)
+        //    {
+        //        if(item.Name.ToLower().Contains(searchTerm.ToLower()))
+        //            filteredEvent.Add(item);
+        //    }
+        //    return filteredEvent;
+        //}
     }
 }
