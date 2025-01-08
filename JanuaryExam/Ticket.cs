@@ -13,6 +13,7 @@ namespace JanuaryExam
         public decimal Price { get; set; }
         public int AvailableTickets { get; set; }
 
+        //Constructor
         public Ticket(string name, decimal price, int availableTickets)
         {
             Name = name;
